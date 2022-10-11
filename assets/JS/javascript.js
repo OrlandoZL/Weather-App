@@ -1,5 +1,5 @@
 var apiKey = "1993e6905ca627dfda6bbc62bc9f8674"
-var currentDay = moment().format("L");
+var currentDay = (moment().format("dddd, MMMM Do YYYY"))
 var searchHistoryList = [];
 
 function currentCondition(city) {
