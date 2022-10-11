@@ -12,6 +12,16 @@ function currentWeather(city) {
     .then(function(cityWeatherResponse){
         console.log(cityWeatherResponse);
 
-        
+        var iconCode = cityWeatherResponse.weather[0].icon;
+        var iconURL = "https://openweathermap.org/img/w/${iconCode}.png";
+
+        var currentCity = $(`
+        <h2 id="currentCity">
+        ${cityWeatherResponse.name} ${today} <img src="$iconURL}"/>
+        </h2>
+        <p>Temperature: ${cityWeatherResponse.main.temp} °F</p>
+        <p>Humidity: ${cityWeatherResponse.main.humidity}\%</p>
+        <p>Wind Speed: ${cityWeatherResponse.wind.speed} MPH</p>
+        `)
     })
 }
