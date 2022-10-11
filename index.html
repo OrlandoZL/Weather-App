@@ -9,14 +9,50 @@
     <title>Weather Forecast</title>
 </head>
 
-<nav class="navbar justify-content-center bg-dark text-white py-4">Weather Dashboard</nav>
+
 <body>
-    <div class="row ">
-        <div class="col-12">
-            <h5>search for a city</h5>
+    <header class="navbar justify-content-center bg-dark text-white py-4">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 pb-1 pt-2">
+                <h3>search for a city:</h3>
+            </div>
+        </div>
+    
+    <div class="row">
+        <div class="col-3">
+            <div class="input-group">
+                <input type="text" id="pickCity" placeholder="Enter a city">
+                <button type="button" id="searchBtn" class="btn btn-primary"></button>
+            </div>
         </div>
     </div>
-    <script src="https://api.openweathermap.org/data/3.0/onecall?lat=37.56&lon=122.32&exclude={part}&appid={1993e6905ca627dfda6bbc62bc9f8674}"></script>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <ul id="searchHistory" class="list-group">
+
+            </ul>
+        </div>
+    </div>
+    <div id="weatherContents" class="col-9 pb-2 pt-3">
+        <div class="row pb-2 mr-2 ml-2">
+            <div class="col-12 rounded px-3 py-3 border">
+            </div>
+        </div>
+    <div class="row pb-2 pt-1">
+        <div class="col-23 ml-2">
+            <h3>5-Day Forecast:</h3>
+        </div>
+        <div id="fiveDay" class="row pl-2">
+            
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/JS/javascript.js"></script>
 </body>
 </html>
